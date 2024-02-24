@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="/icons/images.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinosaur Museum Wiki</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+     
+
+
+
+<body>
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+          <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+          <span class="fs-4">Dinosaur Museum Wikipedia</span>
+        </a>
+  
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a href="/home" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="/post" class="nav-link">Make a post</a></li>
+           </ul>
+           <form class="form-inline my-2 my-lg-1 ">
+            
+            
+          </form>
+      </header>
+   
+     <img   src="/IMG/Museum-of-Ancient-Life-5.jpeg" class="img-fluid" >
+     <% for(_FindAll of FindAll){%>
+    <div class="container">
+        <br>
+        <div class="col">
+            <div class="card shadow-sm">
+                <li><img  class="IMG-Class" src="/uploads/<%=_FindAll.image  %>" width="400" height="400" alt=""></li>
+              <div class="card-body">
+                <ul class="ul-style">
+                  
+                  
+                     <li>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                           <a  class="btn-controlls"  href="/show/<%= _FindAll._id %>"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>  
+                        
+                        </div>
+                     </li>
+                     <li>         <%= _FindAll.fname %></li>
+                     <li>         <%= _FindAll.lname %></li>
+                     <li> Email   <%= _FindAll.email %></li>
+                     <li> Phone   <%= _FindAll.phone %></li>
+                      <h1>User comments</h1> 
+                      <li>Species name <%= _FindAll.speciesName %></li>
+                      <br>
+                      
+                     <li class="post_controll"><%= _FindAll.post %></li>
+                   
+                  
+                </ul>
+             
+                
+              </div>
+            </div>
+          </div>
+    
+      </div>
+    
+      <% } %>
+   
+    
+</body>
+</html>

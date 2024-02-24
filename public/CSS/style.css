@@ -1,0 +1,51 @@
+
+.btn-controlls{
+
+color: rgb(251, 251, 249);
+text-decoration: none;
+font-size: 30px;
+list-style-type: none;
+
+}
+
+.container{
+display: inline-flex;
+display: flex;
+justify-content: center;
+
+
+}
+
+.btns-repost{
+margin-right: 40px;
+
+}
+
+.container-for-btns{
+
+  display: inline-flex;
+  display: flex;
+
+}
+
+.ul-style{
+  list-style-type: none;
+
+
+
+}
+
+
+.IMG-Class{
+
+  list-style-type: none;
+  border-radius: 10px;
+  margin-top: 20px;
+  
+}
+
+.img{
+
+
+  width: 50%;
+}
